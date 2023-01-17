@@ -1,0 +1,17 @@
+﻿<Window x:Class="ExperienceCounter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ExperienceCounter"
+        mc:Ignorable="d"
+        Title="ExpCounter" Height="200" Width="200"
+        Background="Gray">
+    <Grid>
+        <Button x:Name="PlusButton" Content="+" HorizontalAlignment="Left" Margin="30,100,0,0" VerticalAlignment="Top" Width="40" Height="40" FontSize="15" FontWeight="Bold" Click="PlusButton_Click" Background="DarkGray"/>
+        <Button x:Name="MinusButton" Content="-" HorizontalAlignment="Left" Margin="110,100,0,0" VerticalAlignment="Top" Width="40" Height="40" FontSize="15" FontWeight="Bold" Click="MinusButton_Click" Background="DarkGray"/>
+        <TextBlock HorizontalAlignment="Center" Margin="0,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="pl-pl" Text="Exp:"/></TextBlock>
+        <TextBox x:Name="experienceText" Text="{Binding Path=Exp, Mode=TwoWay}" HorizontalAlignment="Center" Margin="0,56,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="Gray"
+                 IsReadOnly="True" FontSize="25" BorderThickness="0" TextAlignment="Center"/>
+    </Grid>
+</Window>
